@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #222;
+}
+
+.input-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group input,
+.input-group select {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Buttons */
+.input-group button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.input-group button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.input-group button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* รายวิชา */
+.subject-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subject-list li {
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background-color: #f1f5f9;
+  border-left: 5px solid #007bff;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.subject-list li:hover {
+  background-color: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.subject-name {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* ข้อความไม่มีรายวิชา */
+.no-subject {
+  font-style: italic;
+  color: #666;
+  text-align: center;
+}
+
+/* GPA container */
+.gpa-container {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.gpa-container button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.gpa-container button:hover:not(:disabled) {
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+.gpa-container button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.gpa-result {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+/* ปรับสี F ให้เด่น */
+.subject-list li p:last-child {
+  color: inherit;
+}
+
+.subject-list li p:last-child:contains("F") {
+  color: #dc3545;
+}
